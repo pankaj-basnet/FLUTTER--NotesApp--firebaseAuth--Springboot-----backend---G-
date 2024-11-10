@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/book_social_networkooocccc
+    username: root
+    password: Mansion199#
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+    database: mysql
+
+application:
+  security:
+    jwt:
+      secret-key: 576f5ee72aaf333edcf7e2a6f3b52aa3cbcee4959591e8a888ef74d674d9c1dd
+      expiration: 86400000  
+  file:
+    uploads:
+      photos-output-path: ./uploads
+      
+server:
+  port: 8088
